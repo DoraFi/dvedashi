@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выберите год:"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"/>
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Посчитать понедельники"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:text="Результат появится здесь"/>
+
+    <Button
+        android:id="@+id/btnGoToDasha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="К задаче Даши"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"/>
+
+</LinearLayout>
