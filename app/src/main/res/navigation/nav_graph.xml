@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_shved">
+
+    <fragment
+        android:id="@+id/navigation_shved"
+        android:name="com.example.lab2git.DashaShvedFragment"
+        tools:layout="@layout/dashashved" />
+
+    <fragment
+        android:id="@+id/navigation_yoon"
+        android:name="com.example.lab2git.DariaYoonFragment"
+        tools:layout="@layout/dariayoon" />
+</navigation>

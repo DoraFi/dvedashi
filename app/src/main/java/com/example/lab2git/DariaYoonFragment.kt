@@ -1,37 +1,43 @@
 package com.example.lab2git
 
 import android.annotation.SuppressLint
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Build
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.DatePicker
 import android.widget.TextView
 import androidx.annotation.RequiresApi
-
+import androidx.fragment.app.Fragment
 import java.time.DayOfWeek
 import java.time.LocalDate
 
 @RequiresApi(Build.VERSION_CODES.O)
-class MainActivityDariaYoon : AppCompatActivity() {
+class DariaYoonFragment : Fragment() {
 
     private lateinit var datePicker: DatePicker
     private lateinit var btnCalculate: Button
     private lateinit var tvResult: TextView
 
     @SuppressLint("MissingInflatedId")
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main_dariayoon)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view = inflater.inflate(R.layout.activity_main_dariayoon, container, false)
 
-        datePicker = findViewById(R.id.datePicker)
-        btnCalculate = findViewById(R.id.btnCalculate)
-        tvResult = findViewById(R.id.tvResult)
+        datePicker = view.findViewById(R.id.datePicker)
+        btnCalculate = view.findViewById(R.id.btnCalculate)
+        tvResult = view.findViewById(R.id.tvResult)
 
         val currentYear = LocalDate.now().year
         datePicker.updateDate(currentYear, 0, 1)
 
         btnCalculate.setOnClickListener { calculateMondays() }
+
+        return view
     }
 
     private fun calculateMondays() {

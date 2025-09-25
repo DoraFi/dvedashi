@@ -1,27 +1,31 @@
 package com.example.lab2git
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.DatePicker
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import java.text.SimpleDateFormat
 import java.util.*
 
-class MainActivityDashaShved : AppCompatActivity() {
+class DashaShvedFragment : Fragment() {
 
     private lateinit var resultText: TextView
     private lateinit var datePicker: DatePicker
     private lateinit var calcButton: Button
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main_dashashved)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view = inflater.inflate(R.layout.activity_main_dashashved, container, false)
 
-        resultText = findViewById(R.id.resultText)
-        datePicker = findViewById(R.id.datePicker)
-        calcButton = findViewById(R.id.pickYearButton)
+        resultText = view.findViewById(R.id.resultText)
+        datePicker = view.findViewById(R.id.datePicker)
+        calcButton = view.findViewById(R.id.pickYearButton)
 
         try {
             val day = datePicker.findViewById<View>(
@@ -44,6 +48,8 @@ class MainActivityDashaShved : AppCompatActivity() {
             val sdf = SimpleDateFormat("yyyy", Locale.getDefault())
             resultText.text = "Выбран год: ${sdf.format(cal.time)}\nВ этом году $sundays воскресений"
         }
+
+        return view
     }
 
     private fun countSundaysInYear(year: Int): Int {
