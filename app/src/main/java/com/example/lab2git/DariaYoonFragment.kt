@@ -26,7 +26,7 @@ class DariaYoonFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.activity_main_dariayoon, container, false)
+        val view = inflater.inflate(R.layout.dariayoon, container, false)
 
         datePicker = view.findViewById(R.id.datePicker)
         btnCalculate = view.findViewById(R.id.btnCalculate)

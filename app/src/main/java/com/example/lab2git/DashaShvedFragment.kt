@@ -21,7 +21,7 @@ class DashaShvedFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.activity_main_dashashved, container, false)
+        val view = inflater.inflate(R.layout.dashashved, container, false)
 
         resultText = view.findViewById(R.id.resultText)
         datePicker = view.findViewById(R.id.datePicker)
