@@ -2,10 +2,7 @@ package com.example.lab2git
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import android.os.Build
 import android.widget.Button
 import android.widget.DatePicker
@@ -16,7 +13,7 @@ import java.time.DayOfWeek
 import java.time.LocalDate
 
 @RequiresApi(Build.VERSION_CODES.O)
-class MainActivity : AppCompatActivity() {
+class MainActivityDariaYoon : AppCompatActivity() {
 
     private lateinit var datePicker: DatePicker
     private lateinit var btnCalculate: Button
@@ -25,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main_dariayoon)
 
         datePicker = findViewById(R.id.datePicker)
         btnCalculate = findViewById(R.id.btnCalculate)
