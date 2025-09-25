@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import java.text.SimpleDateFormat
 import java.util.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivityDashaShved : AppCompatActivity() {
 
     private lateinit var resultText: TextView
     private lateinit var datePicker: DatePicker
@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.`activity_main_dashashved.xml`)
+        setContentView(R.layout.activity_main_dashashved)
 
         resultText = findViewById(R.id.resultText)
         datePicker = findViewById(R.id.datePicker)
