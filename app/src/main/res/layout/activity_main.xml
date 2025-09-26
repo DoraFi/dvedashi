@@ -15,7 +15,7 @@
             android:id="@+id/materialToolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:title="Лаба 2"/>
+            app:title="Лаба 000000"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
